@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Día del Padre</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      padding: 20px;
+    }
+
+    .card {
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    img {
+      width: 80%;
+      max-width: 300px;
+      border-radius: 15px;
+      margin: 15px 0;
+      transition: 0.5s;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff9800;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>¡Feliz Día del Padre! ❤️</h1>
+
+  <p id="texto">Mi padre es un señor elegante y respetable<br>
+    que tiene mucho conocimiento y saber 😎<br>
+     y rara vez no tiene razón.</p>
+
+  <img id="foto" src="images/formal.jpg">
+
+  
+
+  <br>
+
+  <button onclick="cambiar()">Click</button>
+
+  <p>😂Feliz dia del Padre😂</p>
+
+  <p style="margin-top:20px;">
+    Gracias por todo, papá. Eres único! te quiero!💙
+  </p>
+</div>
+
+<script>
+  let estado = 0;
+
+  function cambiar() {
+    const foto = document.getElementById("foto");
+    const texto = document.getElementById("texto");
+
+    if (estado == 0) {
+      foto.src = "images/sorpresa.jpg";
+      texto.innerText = "Pero las pocas veces que no acierta son legendarias 😂";
+      estado = 1;
+    } else {
+      foto.src = "images/formal.jpg";
+      texto.innerHTML = "Mi padre es un señor elegante y respetable <br>que tiene mucho conocimiento y saber 😎<br> y rara vez no tiene razón.";
+      estado = 0;
+    }
+  }
+</script>
+
+</body>
+</html>
